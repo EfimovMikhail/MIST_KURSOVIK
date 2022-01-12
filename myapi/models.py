@@ -1,7 +1,7 @@
 from django.db import models
 
 class Merop(models.Model):
-    name = models.CharField('Название мероприятия ', max_length=200)
+    name = models.CharField('Наименование мероприятия', max_length=200)
     participants = models.CharField('Количество участников', max_length=200)
     date = models.CharField('Дата', max_length=200)
     place = models.CharField('Место', max_length=200)
