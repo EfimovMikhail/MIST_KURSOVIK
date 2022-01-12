@@ -7,3 +7,4 @@ django-filter
 pyyaml
 gunicorn
 whitenoise
+travis
