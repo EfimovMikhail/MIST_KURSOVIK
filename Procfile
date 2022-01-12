@@ -1,1 +1,1 @@
-web: gunicorn myrest.wsgi
+web: gunicorn myrest.wsgi --log-file -
