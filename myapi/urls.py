@@ -1,13 +1,8 @@
-from django.urls import include, path
-from rest_framework import routers
-from . import views
+from django.conf.urls import url
+from myrest import views
 
-router = routers.DefaultRouter()
-router.register(r'Meropriyatya', views.MeropViewSet)
-
-# Wire up our API using automatic URL routing.
-# Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api/myrest$', views.merop_list),
+    url(r'^api/myrest/(?P<pk>[0-9]+)$', views.merop_detail),
+    url(r'^api/myrest/published$', views.merop_list_published)
 ]
