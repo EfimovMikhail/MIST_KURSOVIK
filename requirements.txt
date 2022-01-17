@@ -8,3 +8,4 @@ pyyaml
 gunicorn
 whitenoise
 travis
+django-cors-headers
