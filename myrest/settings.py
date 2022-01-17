@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'myrest.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kr-MIST',
+        'NAME': 'krmist_db',
         'USER': 'postgres',
-        'PASSWORD': 'ps_password',
+        'PASSWORD': os.environ['DATABASE_PASSWORD'] if 'DATABASE_PASSWORD' in os.environ else '',
         'HOST': 'localhost',
         'PORT': '5432',
     }

@@ -1,8 +1,12 @@
-from django.urls import re_path
-from myrest import views
+from django.contrib import admin
+from django.urls import path, include
+from .views import merop_list, merop_detail, merop_list_published
+
+
 
 urlpatterns = [
-    re_path(r'^api/myrest$', views.merop_list),
-    re_path(r'^api/myrest/(?P<pk>[0-9]+)$', views.merop_detail),
-    re_path(r'^api/myrest/published$', views.merop_list_published)
+    path('merop_list', merop_list),
+    path('details/<int:pk>', merop_detail),
+    path('published', merop_list_published),
+
 ]
