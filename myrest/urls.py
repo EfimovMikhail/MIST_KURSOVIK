@@ -1,6 +1,7 @@
-from django.conf.urls import url, include
+from django.conf.urls import re_path, path, include
 
 urlpatterns = [
-    url(r'^', include('myrest.urls')),
+    re_path(r'^', include('myrest.urls')),
+    path('admin/', admin.site.urls),
 ]
 
