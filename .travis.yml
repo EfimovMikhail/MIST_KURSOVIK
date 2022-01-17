@@ -4,7 +4,7 @@ python:
 services:
 - postgresql
 install:
-- psql -c 'create database django_db owner postgres;' -U postgres
+- psql -c 'create database krmist_db owner postgres;' -U postgres
 - pip install -r requirements.txt
 script:
 - python manage.py migrate
@@ -13,5 +13,5 @@ deploy:
   api_key:
     secure: XyWRcakbxe/OzwVGZR6cAdbbSspdJuPRQu0Mrsp7GOyLA5y2hG+HBYExr6i5350nNMaczV+xpAQxTI0ji3f535a8E5YIdiJpUVj7lKO9hcHwyrEamJoYHBReQFrfGFUyQAgF3/lk7kPbIgNLS9ZmJncfubVayV8fYn4SBejMe+M4d1kv3FSisW7GW7RGIlWQTMnhhlIlxudQAQ1itg4avrLhB4xRCJBuxZV/NbYEHaNi4JaFHcrNawbrASwfmck0MmOOt6pm6wDSqU8c2QeZD9PL23cx8MhUiiVaECySddIZNNLXu1HRtlr709pNb/YNEQSO1JW6fo3HZLGb9zQH2IqfY8MwBOjEfRwXuH3SwLEN/U4+ZTI5eNDioGgUY6e4yyyvCrTLXHM9MVDQnDmjpR3k2F3WqmJUK7wjpnntFDtHJVyPFhBJYNkS0Mor8H29QU3a1zZ/VYHdiVW4OPypt44CWLrh8SPCG2RBeL4eESN0uK1PGNG1Kv26Moc99aK9s/ibdXZnoxXHNZAoGpmIdwyDhbxIbVeYIz6bXjO/p4zwIfUOAXA3XCA+bMEGoYOxGpO9d45E6oDAq7ynRVRq25ioErImwmOJAer2hjxpxaA2AWcTSETi+913Lx9Sv/yqyle+JK5BIMfsCW10KMSXmt3zjBCrC0wOkgBdLgivQKI=
   app: kr-efimov
-  run: python manage.py migrate&& python manage.py
+  run: python manage.py migrate
   on.: main
